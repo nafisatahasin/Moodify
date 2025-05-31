@@ -15,12 +15,6 @@
 
 ---
 
-## 🚀 Demo
-
-![Moodify Screenshot](assets/moodify_ui.png) <!-- Add screenshot of UI if available -->
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend:** Flask + PyTorch
