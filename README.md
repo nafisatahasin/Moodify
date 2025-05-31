@@ -43,18 +43,26 @@ Local Journal Logging – Saves user entries for reflection.
 
 🚀 How to Run Locally
 Clone the repo:
+
 ![image](https://github.com/user-attachments/assets/16c8a023-9efe-424d-8a74-f89c3edee2db)
+
 Create a virtual environment & activate:
+
 ![image](https://github.com/user-attachments/assets/8f30d723-5344-4048-82fa-411e520b5f12)
 Install dependencies:
+
 ![image](https://github.com/user-attachments/assets/0c87cc52-24ea-4957-b480-2f6f00703fb7)
 Download NLTK resources:
+
 ![image](https://github.com/user-attachments/assets/73cd99a9-620a-4fcf-98c4-e0b5b565bb61)
 Train the model (only once):
+
 ![image](https://github.com/user-attachments/assets/d5131516-7061-4be8-a33b-493a21b857bb)
 Run the app:
+
 ![image](https://github.com/user-attachments/assets/8e3acaef-ab8b-47ff-bd6d-8e1f5c9437c5)
 Open in browser:
+
 ![image](https://github.com/user-attachments/assets/da8d193c-2fff-4a04-8dde-00835f7da155)
 ✨ Future Enhancements
 ✅ PDF export of journal logs
