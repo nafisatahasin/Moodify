@@ -118,13 +118,7 @@ Moodify/
 
 ## 🙌 Contributions
 
-Pull requests and suggestions are welcome! 💡
-
----
-
-## 📜 License
-
-MIT License © 2025 [Your Name]
+Pull requests and suggestions are welcome! 
 
 ---
 
