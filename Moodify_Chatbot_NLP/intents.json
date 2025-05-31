@@ -1,0 +1,49 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Is anyone there?", "Good day"],
+      "responses": ["Hello! I'm MoodMate. How are you feeling today?"]
+    },
+    {
+      "tag": "how_are_you",
+      "patterns": ["How are you?", "What's up?", "How's it going?"],
+      "responses": ["I'm doing well, thank you! How about you?"]
+    },
+    {
+      "tag": "sad",
+      "patterns": ["I'm sad", "Feeling low", "I'm depressed", "I feel down"],
+      "responses": [
+        "I'm really sorry to hear that. Would you like to talk about what's troubling you?",
+        "I'm here for you. It's okay to feel sad sometimes."
+      ]
+    },
+    {
+      "tag": "anxious",
+      "patterns": ["I'm anxious", "I have anxiety", "Feeling nervous"],
+      "responses": [
+        "Anxiety can be tough. Try some deep breaths. Want me to guide you through one?",
+        "You’re not alone in this. I can also suggest a calming exercise."
+      ]
+    },
+    {
+      "tag": "cope",
+      "patterns": ["How can I cope?", "What should I do?", "Help me feel better"],
+      "responses": [
+        "You could try journaling, breathing exercises, or listening to music. Want a suggestion?",
+        "Let’s try a quick grounding technique. Ready?"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thank you", "Thanks", "Appreciate it"],
+      "responses": ["You're always welcome. I'm here for you 💙"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you", "Talk later"],
+      "responses": ["Take care of yourself. I’m always here if you need to talk."]
+    }
+  ]
+}
+

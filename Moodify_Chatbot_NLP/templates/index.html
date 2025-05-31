@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moodify - Your Mental Wellness Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #cce5f6, #e6f7ff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .chat-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .chat-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .chat-box {
+      max-height: 400px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      padding-right: 10px;
+    }
+
+    .user, .bot {
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin: 10px 0;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background-color: #d0f0fd;
+      align-self: flex-end;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .bot {
+      background-color: #f1f0f0;
+      align-self: flex-start;
+    }
+
+    #user-input {
+      border-radius: 20px;
+    }
+
+    button {
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container d-flex flex-column">
+    <h2 class="chat-title">💬 Moodify - Your Wellness Chatbot</h2>
+    <div id="chat-box" class="chat-box d-flex flex-column"></div>
+    <form id="chat-form" class="d-flex">
+      <input type="text" id="user-input" class="form-control me-2" placeholder="Type how you're feeling..." autocomplete="off" required />
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('user-input');
+    const chatBox = document.getElementById('chat-box');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userText = input.value.trim();
+      if (!userText) return;
+
+      appendMessage(userText, 'user');
+      input.value = '';
+      
+      try {
+        const res = await fetch('/get', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ message: userText })
+        });
+
+        const data = await res.json();
+        appendMessage(data.reply, 'bot');
+      } catch (error) {
+        appendMessage("Oops! Something went wrong.", 'bot');
+      }
+    });
+
+    function appendMessage(msg, sender) {
+      const div = document.createElement('div');
+      div.className = sender;
+      div.textContent = msg;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
+
+
