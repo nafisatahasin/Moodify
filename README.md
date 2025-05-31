@@ -42,29 +42,39 @@ Spotify API (Planned/Optional) – For fetching mood-based playlists or songs.
 Local Journal Logging – Saves user entries for reflection.
 
 🚀 How to Run Locally
-Clone the repo:
 
-![image](https://github.com/user-attachments/assets/16c8a023-9efe-424d-8a74-f89c3edee2db)
-
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/yourusername/Moodify.git
+   cd Moodify
 Create a virtual environment & activate:
 
-![image](https://github.com/user-attachments/assets/8f30d723-5344-4048-82fa-411e520b5f12)
+python -m venv venv
+venv\Scripts\activate
+
 Install dependencies:
 
-![image](https://github.com/user-attachments/assets/0c87cc52-24ea-4957-b480-2f6f00703fb7)
+pip install flask torch nltk
+
 Download NLTK resources:
 
-![image](https://github.com/user-attachments/assets/73cd99a9-620a-4fcf-98c4-e0b5b565bb61)
+import nltk
+nltk.download('punkt')
+
 Train the model (only once):
 
-![image](https://github.com/user-attachments/assets/d5131516-7061-4be8-a33b-493a21b857bb)
+python train.py
+
 Run the app:
 
-![image](https://github.com/user-attachments/assets/8e3acaef-ab8b-47ff-bd6d-8e1f5c9437c5)
+python app1.py
+
 Open in browser:
 
-![image](https://github.com/user-attachments/assets/da8d193c-2fff-4a04-8dde-00835f7da155)
+http://127.0.0.1:5000/
+
 ✨ Future Enhancements
+
 ✅ PDF export of journal logs
 
 ✅ Spotify mood-based playlist integration
