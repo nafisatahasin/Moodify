@@ -2,47 +2,106 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "Is anyone there?", "Good day"],
-      "responses": ["Hello! I'm MoodMate. How are you feeling today?"]
+      "patterns": [
+        "Hi", "Hello", "Hey", "Is anyone there?", "Good day", "Hey there", "What's up?", "Yo", "Hi MoodMate", "Hola"
+      ],
+      "responses": [
+        "Hello! I'm MoodMate. How are you feeling today?",
+        "Hi there! I'm here for you. What's on your mind?",
+        "Hey! I’m MoodMate, your mental wellness companion. How are you today?"
+      ]
     },
     {
       "tag": "how_are_you",
-      "patterns": ["How are you?", "What's up?", "How's it going?"],
-      "responses": ["I'm doing well, thank you! How about you?"]
+      "patterns": ["How are you?", "What's up?", "How's it going?", "How are things?", "You good?"],
+      "responses": [
+        "I'm doing well, thank you! And you?",
+        "I'm here and ready to listen. How are *you* feeling?",
+        "All good on my side. Tell me how you're doing today."
+      ]
     },
     {
       "tag": "sad",
-      "patterns": ["I'm sad", "Feeling low", "I'm depressed", "I feel down"],
+      "patterns": [
+        "I'm sad", "Feeling low", "I'm depressed", "I feel down", "Can't stop crying", "Lost interest in everything", "I'm hopeless"
+      ],
       "responses": [
-        "I'm really sorry to hear that. Would you like to talk about what's troubling you?",
-        "I'm here for you. It's okay to feel sad sometimes."
+        "I'm really sorry to hear that. Want to talk about what's troubling you?",
+        "You're not alone. I'm here for you. Would writing in a journal help?",
+        "Here’s a journaling prompt: *What's been weighing on your mind lately?*",
+        "Would you like to hear a calming song?",
+        "It’s okay to feel down. Let’s find something soothing together 💙"
       ]
     },
     {
       "tag": "anxious",
-      "patterns": ["I'm anxious", "I have anxiety", "Feeling nervous"],
+      "patterns": [
+        "I'm anxious", "I have anxiety", "Feeling nervous", "I can't relax", "Panic attacks", "I'm overwhelmed"
+      ],
       "responses": [
-        "Anxiety can be tough. Try some deep breaths. Want me to guide you through one?",
-        "You’re not alone in this. I can also suggest a calming exercise."
+        "Anxiety can be overwhelming. Would a guided breathing exercise help?",
+        "You're not alone in this. Want to try a 4-7-8 breathing technique together?",
+        "Would a calming music playlist help ease your nerves?",
+        "Try journaling your thoughts. Here’s a prompt: *What’s one thing I can control right now?*",
+        "Let’s ground ourselves. Ready for a quick mental reset?"
       ]
     },
     {
       "tag": "cope",
-      "patterns": ["How can I cope?", "What should I do?", "Help me feel better"],
+      "patterns": [
+        "How can I cope?", "What should I do?", "Help me feel better", "I need a way to handle this", "Any coping tips?", "How to manage this?"
+      ],
       "responses": [
-        "You could try journaling, breathing exercises, or listening to music. Want a suggestion?",
-        "Let’s try a quick grounding technique. Ready?"
+        "Let’s try some techniques: journaling, mindful breathing, or listening to music. Want one now?",
+        "Would you like a journaling prompt or a calming song suggestion?",
+        "Sometimes, expressing yourself can help. Want to write something down?",
+        "Here's a journal idea: *Describe a peaceful moment you’ve experienced.*",
+        "How about a motivational playlist to shift your mood?"
+      ]
+    },
+    {
+      "tag": "journal_request",
+      "patterns": [
+        "Give me a journaling prompt", "I want to write", "Prompt for journaling", "Need journal help", "Help me express myself"
+      ],
+      "responses": [
+        "Sure! *What does emotional safety mean to you?*",
+        "*List three things that brought you a small sense of joy today.*",
+        "*What would you say to your younger self right now?*",
+        "*Describe a moment where you felt proud of yourself.*",
+        "*What’s something you’re struggling to let go of?*"
+      ]
+    },
+    {
+      "tag": "music_request",
+      "patterns": [
+        "Play a song", "Suggest a song", "Mood music", "I want music", "Play something calming", "Sad song", "Relaxing music please"
+      ],
+      "responses": [
+        "Here’s a song you might like: *'Weightless' by Marconi Union* 🎧",
+        "*'Someone Like You' by Adele* might resonate with your feelings right now.",
+        "You may enjoy this: *'Let Her Go' by Passenger*. It’s gentle and emotional.",
+        "Try this soothing tune: *'River Flows in You' by Yiruma*.",
+        "Here’s a Spotify playlist to uplift you: [Calm Vibes](https://open.spotify.com/playlist/37i9dQZF1DWU0ScTcjJBdj)"
       ]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thank you", "Thanks", "Appreciate it"],
-      "responses": ["You're always welcome. I'm here for you 💙"]
+      "patterns": ["Thank you", "Thanks", "Appreciate it", "Thank you so much", "Thanks a lot", "You helped me"],
+      "responses": [
+        "You're always welcome. I’m glad I could help 💙",
+        "It means a lot to hear that. Take care of yourself!",
+        "You're doing great just by reaching out. I’m proud of you."
+      ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you", "Talk later"],
-      "responses": ["Take care of yourself. I’m always here if you need to talk."]
+      "patterns": ["Bye", "See you", "Talk later", "Goodnight", "Catch you later"],
+      "responses": [
+        "Take care of yourself. I’m always here if you need to talk.",
+        "Sending you positive energy 🌟 Talk to you soon!",
+        "Rest well. You deserve peace and comfort."
+      ]
     }
   ]
 }
